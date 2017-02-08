@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: u-t04
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: u-t04
+    spec:
+      containers:
+
+        - name: u-t04
+          imagePullPolicy: "Always"
+          image: "lsstsqre/uservice-t04"
+          ports:
+            -
+              containerPort: 5000
+              name: u-t04
+              
